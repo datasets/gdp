@@ -1,34 +1,38 @@
 {
   "metadata": {
     "name": "gdp",
-    "title": "Country, Regional and World GDP",
+    "title": "Country, Regional and World GDP (Gross Domestic Product)",
     "licenses": [
       {
         "id": "odc-pddl",
         "url": "http://opendatacommons.org/licenses/pddl/"
       }
-    ]
+    ],
+    "keywords": [ "GDP", "World", "Gross Domestic Product", "Time series" ],
+    "version": "2011"
   },
   "schemas": {
-    "data/gdp.csv": [
-      {
-        "id": "Country Name",
-        "type": "string"
-      },
-      {
-        "id": "Country Code",
-        "type": "string",
-        "foreignkey": "iso-3-geo-codes/id"
-      },
-      {
-        "id": "Year",
-        "type": "date",
-        "fulltype": "date/year"
-      },
-      {
-        "id": "Value",
-        "type": "float"
-      }
-    ]
+    "data/gdp.csv": {
+      "fields": [
+        {
+          "id": "Country Name",
+          "type": "string"
+        },
+        {
+          "id": "Country Code",
+          "type": "string",
+          "foreignkey": "iso-3-geo-codes/id"
+        },
+        {
+          "id": "Year",
+          "type": "date",
+          "fulltype": "date/year"
+        },
+        {
+          "id": "Value",
+          "type": "float"
+        }
+      ]
+    }
   }
 }
