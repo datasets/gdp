@@ -11,8 +11,9 @@
     "keywords": [ "GDP", "World", "Gross Domestic Product", "Time series" ],
     "version": "2011"
   },
-  "schemas": {
-    "data/gdp.csv": {
+  "files": [
+    {
+      "path": "data/gdp.csv",
       "fields": [
         {
           "id": "Country Name",
@@ -34,5 +35,5 @@
         }
       ]
     }
-  }
+  ]
 }
