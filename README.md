@@ -10,5 +10,5 @@ in turn lists as sources: *World Bank national accounts data, and OECD National
 Accounts data files*.
 
 
-[wb]: data.worldbank.org/indicator/NY.GDP.MKTP.CD
+[wb]: http://data.worldbank.org/indicator/NY.GDP.MKTP.CD
 
