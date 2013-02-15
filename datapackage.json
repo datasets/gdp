@@ -16,7 +16,7 @@
     "name": "World Bank and OECD",
     "web": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
   }],
-  "data": [
+  "files": [
     {
       "path": "data/gdp.csv",
       "fields": [
