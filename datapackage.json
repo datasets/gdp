@@ -19,26 +19,28 @@
   "files": [
     {
       "path": "data/gdp.csv",
-      "fields": [
-        {
-          "id": "Country Name",
-          "type": "string"
-        },
-        {
-          "id": "Country Code",
-          "type": "string",
-          "foreignkey": "iso-3-geo-codes/id"
-        },
-        {
-          "id": "Year",
-          "type": "date",
-          "fulltype": "date/year"
-        },
-        {
-          "id": "Value",
-          "type": "float"
-        }
-      ]
+      "schema": {
+        "fields": [
+          {
+            "id": "Country Name",
+            "type": "string"
+          },
+          {
+            "id": "Country Code",
+            "type": "string",
+            "foreignkey": "iso-3-geo-codes/id"
+          },
+          {
+            "id": "Year",
+            "type": "date",
+            "fulltype": "date/year"
+          },
+          {
+            "id": "Value",
+            "type": "float"
+          }
+        ]
+      }
     }
   ]
 }
