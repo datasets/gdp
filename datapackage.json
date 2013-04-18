@@ -33,11 +33,12 @@
           {
             "id": "Year",
             "type": "date",
-            "fulltype": "date/year"
+            "format": "yyyy"
           },
           {
             "id": "Value",
-            "type": "float"
+            "description": "GDP in current USD", 
+            "type": "number"
           }
         ]
       }
