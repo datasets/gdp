@@ -5,10 +5,20 @@ process.py of data package repository).
 
 ## Source
 
-The data is sourced from the World Bank (specifically [this dataset][wb]) which
+The data is sourced from the World Bank (specifically [this dataset][current]) which
 in turn lists as sources: *World Bank national accounts data, and OECD National
 Accounts data files*.
 
+Note that there are a variety of different GDP indicators on offer from the
+World Bank including:
 
-[wb]: http://data.worldbank.org/indicator/NY.GDP.MKTP.CD
+* [GDP in current USD][current]
+* [GDP in constant USD (2000)][constant]
+* [GDP, PPP (constant 2005 international $)][ppp]
+* [GDP (constant LCU)][lcu]
+
+[constant]: http://data.worldbank.org/indicator/NY.GDP.MKTP.KD - GDP constant USD
+[current]: http://data.worldbank.org/indicator/NY.GDP.MKTP.CD
+[ppp]: http://data.worldbank.org/indicator/NY.GDP.MKTP.PP.KD - PPP
+[lcu]: http://data.worldbank.org/indicator/NY.GDP.MKTP.KN
 
