@@ -17,8 +17,8 @@ World Bank including:
 * [GDP, PPP (constant 2005 international $)][ppp]
 * [GDP (constant LCU)][lcu]
 
-[constant]: http://data.worldbank.org/indicator/NY.GDP.MKTP.KD - GDP constant USD
+[constant]: http://data.worldbank.org/indicator/NY.GDP.MKTP.KD
 [current]: http://data.worldbank.org/indicator/NY.GDP.MKTP.CD
-[ppp]: http://data.worldbank.org/indicator/NY.GDP.MKTP.PP.KD - PPP
+[ppp]: http://data.worldbank.org/indicator/NY.GDP.MKTP.PP.KD
 [lcu]: http://data.worldbank.org/indicator/NY.GDP.MKTP.KN
 
