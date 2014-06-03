@@ -2,12 +2,7 @@
   "name": "gdp",
   "title": "Country, Regional and World GDP (Gross Domestic Product)",
   "description": "Country, regional and world GDP in current US Dollars ($). Regional means collections of countries e.g. Europe & Central Asia. Data is sourced from the World Bank and turned into a standard normalized CSV.",
-  "licenses": [
-    {
-      "id": "odc-pddl",
-      "url": "http://opendatacommons.org/licenses/pddl/"
-    }
-  ],
+  "license": "PDDL-1.0",
   "keywords": [ "GDP", "World", "Gross Domestic Product", "Time series" ],
   "version": "2011",
   "last_updated": "2011-09-21",
@@ -22,21 +17,21 @@
       "schema": {
         "fields": [
           {
-            "id": "Country Name",
+            "name": "Country Name",
             "type": "string"
           },
           {
-            "id": "Country Code",
+            "name": "Country Code",
             "type": "string",
             "foreignkey": "iso-3-geo-codes/id"
           },
           {
-            "id": "Year",
+            "name": "Year",
             "type": "date",
             "format": "yyyy"
           },
           {
-            "id": "Value",
+            "name": "Value",
             "description": "GDP in current USD", 
             "type": "number"
           }
