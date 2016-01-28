@@ -24,7 +24,10 @@
           {
             "name": "Country Code",
             "type": "string",
-            "foreignkey": "iso-3-geo-codes/id"
+            "foreignkey": "iso-3-geo-codes/id",
+            "constraints": {
+              "required": false
+            }
           },
           {
             "name": "Year",
