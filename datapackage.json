@@ -1,16 +1,15 @@
 {
-  "name": "gdp",
-  "title": "Country, Regional and World GDP (Gross Domestic Product)",
   "description": "Country, regional and world GDP in current US Dollars ($). Regional means collections of countries e.g. Europe & Central Asia. Data is sourced from the World Bank and turned into a standard normalized CSV.",
-  "license": "PDDL-1.0",
-  "keywords": [ "GDP", "World", "Gross Domestic Product", "Time series" ],
-  "version": "2011",
-  "last_updated": "2011-09-21",
   "image": "http://assets.okfn.org/p/opendatahandbook/img/data-wrench.png",
-  "sources": [{
-    "name": "World Bank and OECD",
-    "web": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
-  }],
+  "keywords": [
+    "GDP",
+    "World",
+    "Gross Domestic Product",
+    "Time series"
+  ],
+  "last_updated": "2011-09-21",
+  "license": "PDDL-1.0",
+  "name": "gdp",
   "resources": [
     {
       "name": "gdp",
@@ -22,22 +21,30 @@
             "type": "string"
           },
           {
+            "foreignkey": "iso-3-geo-codes/id",
             "name": "Country Code",
-            "type": "string",
-            "foreignkey": "iso-3-geo-codes/id"
+            "type": "string"
           },
           {
+            "format": "any",
             "name": "Year",
-            "type": "date",
-            "format": "yyyy"
+            "type": "date"
           },
           {
+            "description": "GDP in current USD",
             "name": "Value",
-            "description": "GDP in current USD", 
             "type": "number"
           }
         ]
       }
     }
-  ]
+  ],
+  "sources": [
+    {
+      "name": "World Bank and OECD",
+      "web": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+    }
+  ],
+  "title": "Country, Regional and World GDP (Gross Domestic Product)",
+  "version": "2011"
 }
