@@ -26,9 +26,8 @@
             "type": "string"
           },
           {
-            "format": "any",
             "name": "Year",
-            "type": "date"
+            "type": "year"
           },
           {
             "description": "GDP in current USD",
@@ -42,7 +41,8 @@
   "sources": [
     {
       "name": "World Bank and OECD",
-      "web": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+      "web": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+      "title": "World Bank and OECD"
     }
   ],
   "title": "Country, Regional and World GDP (Gross Domestic Product)",
