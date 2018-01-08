@@ -1,9 +1,7 @@
 Country, regional and world GDP in current US Dollars ($). Regional means
-collections of countries e.g. Europe & Central Asia. Data is sourced from the
-World Bank and turned into a standard normalized CSV (code can be found in
-process.py of data package repository).
+collections of countries e.g. Europe & Central Asia.
 
-## Source
+## Data
 
 The data is sourced from the World Bank (specifically [this dataset][current]) which
 in turn lists as sources: *World Bank national accounts data, and OECD National
@@ -22,3 +20,16 @@ World Bank including:
 [ppp]: http://data.worldbank.org/indicator/NY.GDP.MKTP.PP.KD
 [lcu]: http://data.worldbank.org/indicator/NY.GDP.MKTP.KN
 
+
+## Preparation
+
+Process is recorded and automated in python script:
+
+```
+scripts/process.py
+```
+
+
+## License
+
+This Data Package is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://www.opendatacommons.org/licenses/pddl/1.0/
