@@ -29,6 +29,9 @@ Process is recorded and automated in python script:
 scripts/process.py
 ```
 
+## Automation
+This dataset is updated every year on the datahub.io:
+https://datahub.io/core/gdp
 
 ## License
 

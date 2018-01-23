@@ -4,6 +4,11 @@ meta:
   owner: AcciyGerman
   ownerid: a08d3588fbae0355042537595c65819d
 
+  title: "Country, Regional and World GDP (Gross Domestic Product)",
+  description: "Country, regional and world GDP in current US Dollars ($). Regional means collections of countries e.g. Europe & Central Asia. Data is sourced from the World Bank and turned into a standard normalized CSV."
+  license: "PDDL-1.0"
+  readme: Country, regional and world GDP in current US Dollars ($). Regional means\ncollections of countries e.g. Europe & Central Asia.\n\n## Data\n\nThe data is sourced from the World Bank (specifically [this dataset][current]) which\nin turn lists as sources: *World Bank national accounts data, and OECD National\nAccounts data files*.\n\nNote that there are a variety of different GDP indicators on offer from the\nWorld Bank including:\n\n* [GDP in current USD][current]\n* [GDP in constant USD (2000)][constant]\n* [GDP, PPP (constant 2005 international $)][ppp]\n* [GDP (constant LCU)][lcu]\n\n[constant]: http://data.worldbank.org/indicator/NY.GDP.MKTP.KD\n[current]: http://data.worldbank.org/indicator/NY.GDP.MKTP.CD\n[ppp]: http://data.worldbank.org/indicator/NY.GDP.MKTP.PP.KD\n[lcu]: http://data.worldbank.org/indicator/NY.GDP.MKTP.KN\n\n\n## Preparation\n\nProcess is recorded and automated in python script:\n\n```\nscripts/process.py\n```\n\n\n## License\n\nThis Data Package is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://www.opendatacommons.org/licenses/pddl/1.0/
+
 inputs:
   -
     kind: datapackage

@@ -7,7 +7,7 @@
     "Gross Domestic Product",
     "Time series"
   ],
-  "last_updated": "2011-09-21",
+  "last_updated": "2018-01-19",
   "license": "PDDL-1.0",
   "name": "gdp",
   "resources": [
@@ -46,5 +46,5 @@
     }
   ],
   "title": "Country, Regional and World GDP (Gross Domestic Product)",
-  "version": "2011"
+  "version": "2017"
 }
