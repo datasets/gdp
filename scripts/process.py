@@ -7,15 +7,17 @@ if not os.path.exists(cache):
     os.makedirs(cache)
 
 dest = os.path.join(cache, 'worldbank-gdp.csv')
-urllib.urlretrieve('http://api.worldbank.org/indicator/NY.GDP.MKTP.CD?format=csv',
-        dest)
+urllib.urlretrieve('http://api.worldbank.org/indicator/NY.GDP.MKTP.CD?format=csv', dest)
+
+# TODO: use worldbank api v2 (it returns a zip file)
+# urllib.urlretrieve('http://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv', dest)
 
 fo = open(dest)
-lines = [ row for row in csv.reader(fo) ]
+lines = [row for row in csv.reader(fo)]
 headings = lines[0]
 lines = lines[1:]
 
-outheadings = [ 'Country Name', 'Country Code', 'Year', 'Value' ]
+outheadings = ['Country Name', 'Country Code', 'Year', 'Value']
 outlines = []
 
 for row in lines:

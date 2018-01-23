@@ -1,0 +1,65 @@
+meta:
+  dataset: gdp
+  findability: public
+  # should match username and id from
+  # cat ~/.config/datahub/config.json
+  owner: AcciyGerman
+  ownerid: a08d3588fbae0355042537595c65819d"
+
+inputs:
+  -
+    kind: datapackage  # currently support only datapackages
+    # the datapackage.json url. This file should be grabbed automatically
+    # url: https://raw.githubusercontent.com/datasets/gdp/master/.datahub/datapackage.json
+
+    parameters:
+      resource-mapping:
+        # the link to original data-source file
+        gdp: http://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv
+
+
+      # with the last changes we don't need the descriptor section
+      # any more - it is taken from `datapackage.json` - YAHOO!
+      # You can now delete it!
+#      descriptor:
+#        # this name will be used in the next steps
+#        name: <resource-name>
+#        title: Title
+#        homepage: <http://source-site.com/>
+#        version: 0.0.1
+#        license: <MIT, GPL, etc?>
+#        # This section should match the source data structure.
+#        # Use datapackage-py infer method to get this in json format.
+#        # Also you can copy it from `dataset/datapackage.json` file
+#        # but check schema twice - usually original processing script changed schema
+#        resources:
+#          -
+#            # probably the original data-source will be written in this file
+#            name: <resource-name> # not sure we need this
+#            path: localpath to csv file
+#            format: csv
+#            mediatype: text/csv
+#            "schema":
+#              "fields":
+#                -
+#                  "name": "id"
+#                  "type": "integer"
+#                -
+#                  "name": "type"
+#                  "type": "string"
+#                # etc
+
+# this part describes what to do with data, how to 'process' it
+# processors are the programs that will wrangle your data. see:
+# https://github.com/frictionlessdata/datapackage-pipelines - dpp
+# https://github.com/frictionlessdata/tabulator-py - tabulator
+# .... add links here
+processing:
+  - # put this processor first in a processing pipeline if the source is zipped
+    input: gdp
+    tabulator:
+      compression: zip
+    output: gdp
+
+# how often to run the automation?
+schedule: every 365d
