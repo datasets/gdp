@@ -13,14 +13,27 @@ inputs:
     parameters:
       resource-mapping:
         # the link to original data-source file
-        gdp: http://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv
+        gdp: http://api.worldbank.org/indicator/NY.GDP.MKTP.CD?format=csv
 
 processing:
   - # put this processor first in a processing pipeline if the source is zipped
     input: gdp
-    tabulator:
-      compression: zip
     output: gdp
+    dpp:
+      extraKeyFields:
+        -
+          name: Year
+          type: integer
+      extraValueField:
+        -
+          name: Value
+          type: number
+      unpivot:
+        -
+          name: ([0-9]{4})
+          keys:
+            Year: \\1
+
 
 # how often to run the automation?
 schedule: every 365d
