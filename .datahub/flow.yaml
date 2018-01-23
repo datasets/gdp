@@ -1,41 +1,36 @@
 meta:
   dataset: gdp
   findability: public
-  # should match username and id from
-  # cat ~/.config/datahub/config.json
   owner: AcciyGerman
   ownerid: a08d3588fbae0355042537595c65819d
 
 inputs:
   -
-    kind: datapackage  # currently support only datapackages
-
+    kind: datapackage
     parameters:
       resource-mapping:
-        # the link to original data-source file
         gdp: http://api.worldbank.org/indicator/NY.GDP.MKTP.CD?format=csv
 
 processing:
-  - # put this processor first in a processing pipeline if the source is zipped
+  -
     input: gdp
     output: gdp
     dpp:
-      - run: unpivot
+      -
+        run: unpivot
         parameters:
+          resources: gdp
           extraKeyFields:
             -
-              name: Year
-              type: integer
+              name: year
+              type: year
           extraValueField:
-            -
-              name: Value
+              name: value
               type: number
           unpivot:
             -
               name: ([0-9]{4})
               keys:
-                Year: \\1
+                year: \1
 
-
-# how often to run the automation?
 schedule: every 365d
