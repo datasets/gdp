@@ -22,15 +22,15 @@ processing:
           resources: gdp
           extraKeyFields:
             -
-              name: year
+              name: Year
               type: year
           extraValueField:
-              name: value
+              name: Value
               type: number
           unpivot:
             -
               name: ([0-9]{4})
               keys:
-                year: \1
+                Year: \1
 
 schedule: every 365d
