@@ -20,19 +20,21 @@ processing:
     input: gdp
     output: gdp
     dpp:
-      extraKeyFields:
-        -
-          name: Year
-          type: integer
-      extraValueField:
-        -
-          name: Value
-          type: number
-      unpivot:
-        -
-          name: ([0-9]{4})
-          keys:
-            Year: \\1
+      - run: unpivot
+        parameters:
+          extraKeyFields:
+            -
+              name: Year
+              type: integer
+          extraValueField:
+            -
+              name: Value
+              type: number
+          unpivot:
+            -
+              name: ([0-9]{4})
+              keys:
+                Year: \\1
 
 
 # how often to run the automation?
