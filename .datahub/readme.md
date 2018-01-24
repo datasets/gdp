@@ -20,18 +20,9 @@ World Bank including:
 [ppp]: http://data.worldbank.org/indicator/NY.GDP.MKTP.PP.KD
 [lcu]: http://data.worldbank.org/indicator/NY.GDP.MKTP.KN
 
-
-## Preparation
-
-Process is recorded and automated in python script:
-
-```
-scripts/process.py
-```
-
 ## Automation
-This dataset is updating every year on the datahub.io:
-https://datahub.io/core/gdp
+
+Datahub updates this dataset every year automatically.
 
 ## License
 
