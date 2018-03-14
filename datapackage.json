@@ -8,7 +8,13 @@
     "Time series"
   ],
   "last_updated": "2018-01-19",
-  "license": "PDDL-1.0",
+  "licenses": [
+    {
+     "name": "ODC-PDDL-1.0",
+     "path": "http://opendatacommons.org/licenses/pddl/",
+     "title": "Open Data Commons Public Domain Dedication and License v1.0"
+    }
+  ],
   "name": "gdp",
   "resources": [
     {
@@ -41,7 +47,7 @@
   "sources": [
     {
       "name": "World Bank and OECD",
-      "web": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+      "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
       "title": "World Bank and OECD"
     }
   ],
