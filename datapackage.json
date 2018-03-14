@@ -27,7 +27,6 @@
             "type": "string"
           },
           {
-            "foreignkey": "iso-3-geo-codes/id",
             "name": "Country Code",
             "type": "string"
           },
