@@ -1,30 +1,37 @@
 import os
-import urllib
+import urllib.request
 import csv
+from zipfile import ZipFile
 
 cache = 'cache'
 if not os.path.exists(cache):
     os.makedirs(cache)
 
-dest = os.path.join(cache, 'worldbank-gdp.csv')
-urllib.urlretrieve('http://api.worldbank.org/indicator/NY.GDP.MKTP.CD?format=csv', dest)
+dest = os.path.join(cache, 'worldbank-gdp.zip')
 
-# TODO: use worldbank api v2 (it returns a zip file)
-# urllib.urlretrieve('http://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv', dest)
+urllib.request.urlretrieve('http://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv', dest)
+with ZipFile(dest, 'r') as zObject:
+  
+    # Extracting all the members of the zip 
+    # into a specific location.
+    zObject.extractall(
+        path=os.path.join(cache, "data"))
 
-fo = open(dest)
+datapath = os.path.join(cache, "data", "API_NY.GDP.MKTP.CD_DS2_en_csv_v2_5728855.csv")
+
+fo = open(datapath)
 lines = [row for row in csv.reader(fo)]
-headings = lines[0]
-lines = lines[1:]
+headings = lines[4]
+lines = lines[5:]
 
-outheadings = ['Country Name', 'Country Code', 'Year', 'Value']
+outheadings = [*headings[:2], 'Year', 'Value']
 outlines = []
 
 for row in lines:
-    for idx, year in enumerate(headings[2:]):
-        if row[idx+2]:
+    for idx, year in enumerate(headings[4:]):
+        if row[idx+4]:
             # do not convert to float as we end up with scientific notation
-            value = row[idx+2]
+            value = row[idx+4]
             outlines.append(row[:2] + [int(year), value])
 
 writer = csv.writer(open('data/gdp.csv', 'w'))
