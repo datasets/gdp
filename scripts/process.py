@@ -1,39 +1,60 @@
 import os
+import io
 import csv
 import json
-import xlrd
+import zipfile
 import requests
 
 from datetime import datetime, timedelta
 
 cache = 'cache'
 data = 'data/gdp.csv'
-url = 'https://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=excel'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+url = 'https://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv'
 outheadings = ['Country Name', 'Country Code', 'Year', 'Value']
 current_year = datetime.now().year
-datapackage = 'datapackage.json'
+datapackage = os.path.abspath('datapackage.json')
 
-def create_cache():
-    if not os.path.exists(cache):
-        os.makedirs(cache)
+def search_files_in_cache():
+    cache_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cache')
 
-def create_csv(dct):
-    rows = list(zip(dct['Country Name'], dct['Country Code'], dct['Year'], dct['Value']))
-    sorted_rows = sorted(rows, key=lambda x: (x[0], x[2]))
+    if not os.path.exists(cache_dir):
+        print("Cache folder does not exist!")
+        return None
 
-    # Ensure the directory exists before writing
-    if not os.path.exists(os.path.dirname(data)):
-        os.makedirs(os.path.dirname(data))
+    filtered_files = [f for f in os.listdir(cache_dir) if 'metadata' not in f.lower()]
 
-    with open(data, 'w', newline='') as outfile:
-        writer = csv.writer(outfile)
-        writer.writerow(outheadings)
-        writer.writerows(sorted_rows)
+    if not filtered_files:
+        print("No valid files found in cache.")
+        return None
 
-def xldate_to_date(xldate):
-    start_date = datetime(1899, 12, 30)
-    converted_date = start_date + timedelta(days=xldate)
-    return converted_date.strftime('%Y-%m-%d')
+    return filtered_files
+
+
+def transform_csv(dest):
+    with open(dest, 'r') as f:
+        reader = csv.reader(f)
+        next(reader)
+        next(reader)
+        updated_date_row = next(reader)
+        last_updated_date = updated_date_row[1].split("-")
+        last_updated_date = f"{last_updated_date[0]}-{last_updated_date[2]}-{last_updated_date[1]}"
+
+        next(reader) 
+        header = next(reader)
+        transformed_data = []
+        for row in reader:
+            country_name = row[0]  
+            country_code = row[1]  
+
+            for i in range(4, len(row)):
+                year = header[i]
+                value = row[i]
+
+                if value:
+                    transformed_data.append([country_name, country_code, year, value])
+    
+    return last_updated_date, transformed_data
 
 def update_datapackage(last_updated):
     with open(datapackage, 'r') as f:
@@ -45,49 +66,38 @@ def update_datapackage(last_updated):
     with open(datapackage, 'w') as f:
         json.dump(dp, f, indent=2)
 
-def process():
-    dest = os.path.join(cache, 'worldbank-gdp.xls')
-    response = requests.get(url)
+def extract_zip():
+    cache_dir = os.path.join(script_dir, cache)
 
-    if response.status_code != 200:
-        print("Error downloading the file")
+    if not os.path.exists(cache_dir):
+        os.makedirs(cache_dir)
+
+    try:
+        r = requests.get(url, stream=True)
+        r.raise_for_status()
+        z = zipfile.ZipFile(io.BytesIO(r.content))
+        z.extractall(path=cache_dir)
+    except requests.exceptions.RequestException as e:
+        print(f"Error downloading the file: {e}")
         return
 
-    with open(dest, 'wb') as f:
-        f.write(response.content)
 
-    workbook = xlrd.open_workbook(dest)
-    worksheet = workbook.sheet_by_name('Data')
+def process():
+    extract_zip()  # Ensure ZIP extraction happens first
+    file_name = search_files_in_cache()[0]
+    dest = os.path.join(script_dir, cache, file_name)
+    last_updated, transformed_data = transform_csv(dest)
 
-    list_rows = list(worksheet.get_rows())
+    output_dir = os.path.dirname('data/')
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
-    dct = {
-        'Country Name': [],
-        'Country Code': [],
-        'Year': [],
-        'Value': [],
-    }
+    with open(os.path.abspath(data), 'w', newline='') as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(outheadings)
+        writer.writerows(transformed_data)
 
-    last_updated = xldate_to_date(list_rows[1][1].value)
-
-    # Process all rows and remove the break
-    for values in list_rows[4:]:
-        start_year = 1960
-        ln = len(values[4:])
-        for elem in range(ln):
-            if values[4 + elem].value == '':
-                start_year += 1
-                continue
-            dct['Country Name'].append(values[0].value)
-            dct['Country Code'].append(values[1].value)
-            dct['Year'].append(start_year)
-            dct['Value'].append(values[4 + elem].value)
-            start_year += 1
-
-    return dct, last_updated
-
-if __name__ == '__main__':
-    create_cache()
-    dct, last_updated = process()
-    create_csv(dct)
     update_datapackage(last_updated)
+    
+if __name__ == '__main__':
+    process()
