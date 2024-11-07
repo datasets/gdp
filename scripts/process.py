@@ -13,7 +13,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 url = 'https://api.worldbank.org/v2/en/indicator/NY.GDP.MKTP.CD?downloadformat=csv'
 outheadings = ['Country Name', 'Country Code', 'Year', 'Value']
 current_year = datetime.now().year
-datapackage = os.path.abspath('datapackage.json')
+datapackage = '../datapackage.json'
 
 def search_files_in_cache():
     cache_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'cache')
