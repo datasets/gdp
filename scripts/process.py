@@ -38,7 +38,7 @@ def transform_csv(dest):
         next(reader)
         updated_date_row = next(reader)
         last_updated_date = updated_date_row[1].split("-")
-        last_updated_date = f"{last_updated_date[0]}-{last_updated_date[2]}-{last_updated_date[1]}"
+        last_updated_date = f"{last_updated_date[0]}-{last_updated_date[1]}-{last_updated_date[2]}"
 
         next(reader) 
         header = next(reader)
