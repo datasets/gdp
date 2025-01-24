@@ -33,7 +33,7 @@ scripts/process.py
 
 ## Automation
 
-Up-to-date (auto-updates every year) gdp dataset could be found on the datahub.io:
+Up-to-date (auto-updates every month) gdp dataset could be found on the datahub.io:
 https://datahub.io/core/gdp
 
 ## License
