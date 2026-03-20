@@ -1,0 +1,231 @@
+country,year,gdp_trillion
+United States,2000,10.251
+United States,2001,10.5819
+United States,2002,10.9291
+United States,2003,11.4565
+United States,2004,12.2172
+United States,2005,13.0392
+United States,2006,13.8156
+United States,2007,14.4742
+United States,2008,14.7699
+United States,2009,14.4781
+United States,2010,15.049
+United States,2011,15.5997
+United States,2012,16.254
+United States,2013,16.8807
+United States,2014,17.6081
+United States,2015,18.295
+United States,2016,18.8049
+United States,2017,19.6121
+United States,2018,20.6565
+United States,2019,21.5214
+United States,2020,21.3229
+United States,2021,23.594
+United States,2022,25.7441
+China,2000,1.2113
+China,2001,1.3394
+China,2002,1.4706
+China,2003,1.6603
+China,2004,1.9553
+China,2005,2.286
+China,2006,2.7521
+China,2007,3.5503
+China,2008,4.5943
+China,2009,5.1017
+China,2010,6.0872
+China,2011,7.5515
+China,2012,8.5322
+China,2013,9.5705
+China,2014,10.4756
+China,2015,11.0616
+China,2016,11.2333
+China,2017,12.3105
+China,2018,13.8949
+China,2019,14.28
+China,2020,14.6877
+China,2021,17.8205
+China,2022,17.8818
+Japan,2000,4.9684
+Japan,2001,4.3747
+Japan,2002,4.1828
+Japan,2003,4.5196
+Japan,2004,4.8931
+Japan,2005,4.8315
+Japan,2006,4.6017
+Japan,2007,4.5798
+Japan,2008,5.1067
+Japan,2009,5.2895
+Japan,2010,5.7591
+Japan,2011,6.2331
+Japan,2012,6.2724
+Japan,2013,5.2123
+Japan,2014,4.897
+Japan,2015,4.4449
+Japan,2016,5.0037
+Japan,2017,4.9308
+Japan,2018,5.0409
+Japan,2019,5.118
+Japan,2020,5.0556
+Japan,2021,5.0346
+Japan,2022,4.2564
+Germany,2000,1.948
+Germany,2001,1.9458
+Germany,2002,2.0785
+Germany,2003,2.5016
+Germany,2004,2.8144
+Germany,2005,2.8469
+Germany,2006,2.9947
+Germany,2007,3.4256
+Germany,2008,3.7453
+Germany,2009,3.4113
+Germany,2010,3.3997
+Germany,2011,3.7493
+Germany,2012,3.5271
+Germany,2013,3.7338
+Germany,2014,3.8891
+Germany,2015,3.3576
+Germany,2016,3.4699
+Germany,2017,3.6908
+Germany,2018,3.9744
+Germany,2019,3.8892
+Germany,2020,3.8877
+Germany,2021,4.2785
+Germany,2022,4.0825
+India,2000,0.4684
+India,2001,0.4854
+India,2002,0.5149
+India,2003,0.6077
+India,2004,0.7092
+India,2005,0.8204
+India,2006,0.9403
+India,2007,1.2167
+India,2008,1.1989
+India,2009,1.3419
+India,2010,1.6756
+India,2011,1.8231
+India,2012,1.8276
+India,2013,1.8567
+India,2014,2.0391
+India,2015,2.1036
+India,2016,2.2948
+India,2017,2.6515
+India,2018,2.7029
+India,2019,2.8356
+India,2020,2.6749
+India,2021,3.1673
+India,2022,3.3535
+United Kingdom,2000,1.6655
+United Kingdom,2001,1.6498
+United Kingdom,2002,1.7857
+United Kingdom,2003,2.0544
+United Kingdom,2004,2.4215
+United Kingdom,2005,2.5432
+United Kingdom,2006,2.7084
+United Kingdom,2007,3.0905
+United Kingdom,2008,2.9294
+United Kingdom,2009,2.4128
+United Kingdom,2010,2.4855
+United Kingdom,2011,2.6638
+United Kingdom,2012,2.7071
+United Kingdom,2013,2.7849
+United Kingdom,2014,3.0647
+United Kingdom,2015,2.9279
+United Kingdom,2016,2.6891
+United Kingdom,2017,2.6801
+United Kingdom,2018,2.8713
+United Kingdom,2019,2.8514
+United Kingdom,2020,2.6978
+United Kingdom,2021,3.1415
+United Kingdom,2022,3.0888
+France,2000,1.3656
+France,2001,1.3777
+France,2002,1.5014
+France,2003,1.8445
+France,2004,2.1196
+France,2005,2.1969
+France,2006,2.3205
+France,2007,2.6606
+France,2008,2.9303
+France,2009,2.7009
+France,2010,2.6452
+France,2011,2.8652
+France,2012,2.6837
+France,2013,2.8119
+France,2014,2.856
+France,2015,2.4392
+France,2016,2.473
+France,2017,2.5952
+France,2018,2.791
+France,2019,2.7289
+France,2020,2.6474
+France,2021,2.9594
+France,2022,2.7791
+Canada,2000,0.7448
+Canada,2001,0.739
+Canada,2002,0.7606
+Canada,2003,0.8955
+Canada,2004,1.0267
+Canada,2005,1.1731
+Canada,2006,1.3193
+Canada,2007,1.4688
+Canada,2008,1.553
+Canada,2009,1.3746
+Canada,2010,1.6173
+Canada,2011,1.7933
+Canada,2012,1.8284
+Canada,2013,1.8466
+Canada,2014,1.8057
+Canada,2015,1.5565
+Canada,2016,1.528
+Canada,2017,1.6493
+Canada,2018,1.7253
+Canada,2019,1.7437
+Canada,2020,1.6557
+Canada,2021,2.0075
+Canada,2022,2.1615
+Italy,2000,1.1467
+Italy,2001,1.168
+Italy,2002,1.2768
+Italy,2003,1.5776
+Italy,2004,1.8065
+Italy,2005,1.8582
+Italy,2006,1.9496
+Italy,2007,2.2131
+Italy,2008,2.4087
+Italy,2009,2.1999
+Italy,2010,2.1361
+Italy,2011,2.295
+Italy,2012,2.087
+Italy,2013,2.1419
+Italy,2014,2.162
+Italy,2015,1.8366
+Italy,2016,1.8771
+Italy,2017,1.9618
+Italy,2018,2.0919
+Italy,2019,2.0113
+Italy,2020,1.8975
+Italy,2021,2.1549
+Italy,2022,2.067
+Brazil,2000,0.6554
+Brazil,2001,0.56
+Brazil,2002,0.5098
+Brazil,2003,0.5582
+Brazil,2004,0.6693
+Brazil,2005,0.8916
+Brazil,2006,1.1076
+Brazil,2007,1.3971
+Brazil,2008,1.6959
+Brazil,2009,1.667
+Brazil,2010,2.2088
+Brazil,2011,2.6162
+Brazil,2012,2.4652
+Brazil,2013,2.4728
+Brazil,2014,2.456
+Brazil,2015,1.8022
+Brazil,2016,1.7957
+Brazil,2017,2.0635
+Brazil,2018,1.9169
+Brazil,2019,1.8733
+Brazil,2020,1.4761
+Brazil,2021,1.6706
+Brazil,2022,1.9519
