@@ -75,7 +75,8 @@
             "description": "GDP in current USD trillions"
           }
         ]
-      }
+      },
+      "description": "Annual GDP in current USD trillions for the world's 10 largest economies since 2000, derived from World Bank data."
     },
     {
       "name": "gdp",
@@ -100,7 +101,8 @@
             "type": "number"
           }
         ]
-      }
+      },
+      "description": "Annual GDP in current US dollars for countries, regions, and the world since 1960, sourced from the World Bank."
     }
   ],
   "sources": [
