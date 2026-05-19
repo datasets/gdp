@@ -43,4 +43,6 @@ https://datahub.io/core/gdp
 
 ## License
 
-This Data Package is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://www.opendatacommons.org/licenses/pddl/1.0/
+This dataset is made available under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).
+
+The underlying data originates from the [World Bank](http://data.worldbank.org/indicator/NY.GDP.MKTP.CD), which publishes its open data under CC BY 4.0. Attribution: World Bank – World Development Indicators.
