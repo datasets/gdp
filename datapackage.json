@@ -10,17 +10,17 @@
   "last_updated": "2026-04-08",
   "licenses": [
     {
-      "name": "ODC-PDDL-1.0",
-      "path": "http://opendatacommons.org/licenses/pddl/",
-      "title": "Open Data Commons Public Domain Dedication and License v1.0"
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0"
     }
   ],
   "name": "gdp",
   "views": [
     {
       "name": "top-economies",
-      "title": "GDP of the World's 10 Largest Economies (2000\u20132022)",
-      "description": "GDP in current USD for the top 10 economies since 2000. The US held a commanding lead throughout, while China's rapid ascent \u2014 from $1.2T in 2000 to $17.9T in 2022 \u2014 is the defining economic shift of the century. India overtook the UK and France in the early 2020s.",
+      "title": "GDP of the World's 10 Largest Economies (2000\u20132023)",
+      "description": "GDP in current USD for the top 10 economies since 2000. The US has held a commanding lead throughout, while China's rapid ascent is the defining economic shift of the century. India overtook the UK and France in the early 2020s.",
       "resources": [
         "top-economies"
       ],
@@ -59,15 +59,18 @@
       "path": "data/top-economies.csv",
       "format": "csv",
       "mediatype": "text/csv",
+      "description": "GDP in current USD trillions for the world's 10 largest economies, covering 2000–2023. Derived from the main gdp resource.",
       "schema": {
         "fields": [
           {
             "name": "country",
-            "type": "string"
+            "type": "string",
+            "description": "Country name"
           },
           {
             "name": "year",
-            "type": "integer"
+            "type": "year",
+            "description": "Year of the GDP observation"
           },
           {
             "name": "gdp_trillion",
@@ -80,19 +83,23 @@
     {
       "name": "gdp",
       "path": "data/gdp.csv",
+      "description": "Country, regional and world GDP in current USD. Each row is one country/region for one year. Sourced from the World Bank indicator NY.GDP.MKTP.CD.",
       "schema": {
         "fields": [
           {
             "name": "Country Name",
-            "type": "string"
+            "type": "string",
+            "description": "Country or region name as given by the World Bank"
           },
           {
             "name": "Country Code",
-            "type": "string"
+            "type": "string",
+            "description": "ISO 3166-1 alpha-3 country code or World Bank region code"
           },
           {
             "name": "Year",
-            "type": "year"
+            "type": "year",
+            "description": "Year of the GDP observation"
           },
           {
             "description": "GDP in current USD",

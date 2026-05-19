@@ -22,6 +22,7 @@ United States,2019,21.5214
 United States,2020,21.3229
 United States,2021,23.594
 United States,2022,25.7441
+United States,2023,27.3609
 China,2000,1.2113
 China,2001,1.3394
 China,2002,1.4706
@@ -45,29 +46,7 @@ China,2019,14.28
 China,2020,14.6877
 China,2021,17.8205
 China,2022,17.8818
-Japan,2000,4.9684
-Japan,2001,4.3747
-Japan,2002,4.1828
-Japan,2003,4.5196
-Japan,2004,4.8931
-Japan,2005,4.8315
-Japan,2006,4.6017
-Japan,2007,4.5798
-Japan,2008,5.1067
-Japan,2009,5.2895
-Japan,2010,5.7591
-Japan,2011,6.2331
-Japan,2012,6.2724
-Japan,2013,5.2123
-Japan,2014,4.897
-Japan,2015,4.4449
-Japan,2016,5.0037
-Japan,2017,4.9308
-Japan,2018,5.0409
-Japan,2019,5.118
-Japan,2020,5.0556
-Japan,2021,5.0346
-Japan,2022,4.2564
+China,2023,17.7948
 Germany,2000,1.948
 Germany,2001,1.9458
 Germany,2002,2.0785
@@ -91,6 +70,31 @@ Germany,2019,3.8892
 Germany,2020,3.8877
 Germany,2021,4.2785
 Germany,2022,4.0825
+Germany,2023,4.4561
+Japan,2000,4.9684
+Japan,2001,4.3747
+Japan,2002,4.1828
+Japan,2003,4.5196
+Japan,2004,4.8931
+Japan,2005,4.8315
+Japan,2006,4.6017
+Japan,2007,4.5798
+Japan,2008,5.1067
+Japan,2009,5.2895
+Japan,2010,5.7591
+Japan,2011,6.2331
+Japan,2012,6.2724
+Japan,2013,5.2123
+Japan,2014,4.897
+Japan,2015,4.4449
+Japan,2016,5.0037
+Japan,2017,4.9308
+Japan,2018,5.0409
+Japan,2019,5.118
+Japan,2020,5.0556
+Japan,2021,5.0346
+Japan,2022,4.2564
+Japan,2023,4.2129
 India,2000,0.4684
 India,2001,0.4854
 India,2002,0.5149
@@ -114,6 +118,7 @@ India,2019,2.8356
 India,2020,2.6749
 India,2021,3.1673
 India,2022,3.3535
+India,2023,3.5499
 United Kingdom,2000,1.6655
 United Kingdom,2001,1.6498
 United Kingdom,2002,1.7857
@@ -137,6 +142,7 @@ United Kingdom,2019,2.8514
 United Kingdom,2020,2.6978
 United Kingdom,2021,3.1415
 United Kingdom,2022,3.0888
+United Kingdom,2023,3.34
 France,2000,1.3656
 France,2001,1.3777
 France,2002,1.5014
@@ -160,29 +166,7 @@ France,2019,2.7289
 France,2020,2.6474
 France,2021,2.9594
 France,2022,2.7791
-Canada,2000,0.7448
-Canada,2001,0.739
-Canada,2002,0.7606
-Canada,2003,0.8955
-Canada,2004,1.0267
-Canada,2005,1.1731
-Canada,2006,1.3193
-Canada,2007,1.4688
-Canada,2008,1.553
-Canada,2009,1.3746
-Canada,2010,1.6173
-Canada,2011,1.7933
-Canada,2012,1.8284
-Canada,2013,1.8466
-Canada,2014,1.8057
-Canada,2015,1.5565
-Canada,2016,1.528
-Canada,2017,1.6493
-Canada,2018,1.7253
-Canada,2019,1.7437
-Canada,2020,1.6557
-Canada,2021,2.0075
-Canada,2022,2.1615
+France,2023,3.0309
 Italy,2000,1.1467
 Italy,2001,1.168
 Italy,2002,1.2768
@@ -206,6 +190,7 @@ Italy,2019,2.0113
 Italy,2020,1.8975
 Italy,2021,2.1549
 Italy,2022,2.067
+Italy,2023,2.2549
 Brazil,2000,0.6554
 Brazil,2001,0.56
 Brazil,2002,0.5098
@@ -229,3 +214,28 @@ Brazil,2019,1.8733
 Brazil,2020,1.4761
 Brazil,2021,1.6706
 Brazil,2022,1.9519
+Brazil,2023,2.1737
+Canada,2000,0.7448
+Canada,2001,0.739
+Canada,2002,0.7606
+Canada,2003,0.8955
+Canada,2004,1.0267
+Canada,2005,1.1731
+Canada,2006,1.3193
+Canada,2007,1.4688
+Canada,2008,1.553
+Canada,2009,1.3746
+Canada,2010,1.6173
+Canada,2011,1.7933
+Canada,2012,1.8284
+Canada,2013,1.8466
+Canada,2014,1.8057
+Canada,2015,1.5565
+Canada,2016,1.528
+Canada,2017,1.6493
+Canada,2018,1.7253
+Canada,2019,1.7437
+Canada,2020,1.6557
+Canada,2021,2.0075
+Canada,2022,2.1615
+Canada,2023,2.1401
