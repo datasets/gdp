@@ -106,7 +106,7 @@ def generate_top_economies(gdp_csv, top_economies_csv, start_year=2000, n=10):
     ]
 
     with open(top_economies_csv, 'w', newline='') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator='\n')
         writer.writerow(['country', 'year', 'gdp_trillion'])
         writer.writerows(rows)
 
@@ -186,7 +186,7 @@ def process():
     os.makedirs(os.path.dirname(gdp_path), exist_ok=True)
 
     with open(gdp_path, 'w', newline='') as outfile:
-        writer = csv.writer(outfile)
+        writer = csv.writer(outfile, lineterminator='\n')
         writer.writerow(outheadings)
         writer.writerows(transformed_data)
 
